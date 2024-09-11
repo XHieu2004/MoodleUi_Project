@@ -4,9 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".USTHHome">
+    tools:context=".fragment.USTHHome">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/htabLayout"
+        android:layout_marginTop="100dp"
+        android:contentDescription="tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/hviewPager2"
+        android:layout_below="@+id/htabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,5 +36,6 @@
         android:layout_marginEnd="50dp"
         android:src="@drawable/searchbutton"
         app:tint="#000000" />
+
 
 </RelativeLayout>

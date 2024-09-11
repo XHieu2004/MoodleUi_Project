@@ -5,6 +5,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.example.moodleui.fragment.CalenderFragment;
+import com.example.moodleui.fragment.More_Fragment;
+import com.example.moodleui.fragment.Notifacations_Fragment;
+import com.example.moodleui.fragment.SiteBlog_Fragment;
+import com.example.moodleui.fragment.USTHHome;
+
 public class ViewPagerAdapter extends FragmentStateAdapter {
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
