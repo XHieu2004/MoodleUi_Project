@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="orange">#FFA500</color>
+    <color name="colorPrimary">#FFA500</color> <!-- Orange -->
+    <color name="colorPrimaryDark">#E59400</color> <!-- Darker Orange for the status bar -->
+    <color name="colorAccent">#FFB347</color> <!-- Lighter Orange for FABs and highlights -->
 </resources>
