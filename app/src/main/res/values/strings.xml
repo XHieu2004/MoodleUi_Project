@@ -11,5 +11,7 @@
     <string name="site_blog_text">No visible entries here</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="course_categories">Courses Categories\n</string>
+    <string name="my_courses">My courses</string>
 
 </resources>

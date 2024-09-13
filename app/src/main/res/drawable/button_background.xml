@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <!-- Button Background Color -->
+            <solid android:color="@color/white"/> <!-- Change this to your desired color -->
+
+            <!-- Border -->
+            <stroke android:width="2dp" android:color="@android:color/black" />
+
+            <!-- Corner radius -->
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+</selector>
