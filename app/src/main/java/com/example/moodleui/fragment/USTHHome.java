@@ -70,6 +70,9 @@ public class USTHHome extends Fragment {
                 case 1:
                     tab.setText("Dashboard");
                     break;
+                case 2:
+                    tab.setText("Thinh ngu");
+                    break;
 
             }
         }).attach();
