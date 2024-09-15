@@ -41,29 +41,4 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
         return 5;
     }
 
-
-//    @NonNull
-//    @Override
-//    public Fragment getItem(int position) {
-//        switch (position){
-//            case 0:
-//                return new USTHHome();
-//            case 1:
-//                return new Notifacations_Fragment();
-//            case 2:
-//                return new CalenderFragment();
-//            case 3:
-//                return new SiteBlog_Fragment();
-//            case 4:
-//                return new More_Fragment();
-//            default:
-//                return new USTHHome();
-//        }
-//
-//    }
-//
-//    @Override
-//    public int getCount() {
-//        return 5;
-//    }
 }

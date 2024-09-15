@@ -3,37 +3,38 @@ package com.example.moodleui.fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
-import androidx.appcompat.view.menu.MenuPopupHelper;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
-
 import com.example.moodleui.R;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.drawerlayout.widget.DrawerLayout;
+import com.google.android.material.navigation.NavigationView;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
+
 
 public class CalenderFragment extends Fragment {
-
-
+    private DrawerLayout drawerLayout;
 
     public CalenderFragment() {
-        // Required empty public constructor
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_calender, container, false);
+
+        drawerLayout = view.findViewById(R.id.cdrawer_layout);
+
+
+
         ImageView imageButton = view.findViewById(R.id.cmorebutton);
 
         imageButton.setOnClickListener(view1 -> {
@@ -46,7 +47,6 @@ public class CalenderFragment extends Fragment {
             popupMenu.setOnMenuItemClickListener(menuItem -> {
                 if (menuItem.getItemId() == R.id.test1) {
                     Toast.makeText(getContext(), "Test 1 clicked", Toast.LENGTH_SHORT).show();
-
                     return true;
                 } else if (menuItem.getItemId() == R.id.test2) {
                     Toast.makeText(getContext(), "Test 2 clicked", Toast.LENGTH_SHORT).show();
@@ -58,6 +58,14 @@ public class CalenderFragment extends Fragment {
 
 
             popupMenu.show();
+        });
+
+
+        ImageView filterButton = view.findViewById(R.id.filter_button);
+        filterButton.setOnClickListener(view12 -> {
+            if (drawerLayout != null && !drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                drawerLayout.openDrawer(GravityCompat.END);
+            }
         });
 
         return view;

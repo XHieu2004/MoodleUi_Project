@@ -5,8 +5,9 @@
         android:id="@+id/test1"
         android:icon="@drawable/pcalender1"
         android:title="Upcoming events"
-        android:visible="true" />
+        android:visible="true"/>
     <item android:id="@+id/test2"
         android:title="Settings"
         android:icon="@drawable/pcalender2"/>
+
 </menu>
