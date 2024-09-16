@@ -93,24 +93,53 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
                 <RadioGroup
+                    android:id="@+id/radio_group"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
 
                     <RadioButton
-                        android:id="@+id/radioButton"
+                        android:id="@+id/radioButton1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="RadioButton1" />
+                        android:layoutDirection="rtl"
+                        android:text="All corses" />
+
 
                     <RadioButton
                         android:id="@+id/radioButton2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:text="RadioButton2" />
+                        android:layoutDirection="rtl"
+                        android:text="13 CHE1.002" />
+
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:text="13 ICT1.002" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:text="13ICT.003" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="rtl"
+                        android:text="13 ICT1.004" />
+
                 </RadioGroup>
+
+
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
