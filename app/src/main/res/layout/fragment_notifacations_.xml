@@ -26,7 +26,7 @@
             android:layout_width="253dp"
             android:layout_height="259dp"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:src="@drawable/notification_image"
+            android:src="@drawable/notification"
             app:tint="#907A7A" />
 
         <TextView
