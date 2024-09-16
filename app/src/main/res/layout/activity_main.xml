@@ -19,7 +19,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
             android:contentDescription="user_image"
-            app:srcCompat="@drawable/user"
+            app:srcCompat="@drawable/user_events_ic"
             tools:layout_marginEnd="20dp" />
 
         <androidx.viewpager2.widget.ViewPager2
