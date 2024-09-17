@@ -3,23 +3,23 @@
     <item
         android:id="@+id/home_dashboard"
         android:title=""
-        android:icon="@drawable/moodle_origin"/>
+        android:icon="@drawable/moodlebuttonorigin"/>
     <item
         android:id="@+id/notifications_button"
         android:title=""
-        android:icon ="@drawable/notification"/>
+        android:icon ="@drawable/moodlenotificationbutton"/>
     <item
         android:id="@+id/calender_button"
         android:title=""
-        android:icon="@drawable/moodle_calendar"/>
+        android:icon="@drawable/moodlecalenderbutton"/>
     <item
         android:id="@+id/site_blog_button"
         android:title=""
-        android:icon="@drawable/moodle_blog"/>
+        android:icon="@drawable/moodlesiteblogbutton"/>
     <item
         android:id="@+id/more_button"
         android:title=""
-        android:icon="@drawable/moodle_more"/>
+        android:icon="@drawable/moodlemorebutton"/>
 
 
 
