@@ -59,6 +59,7 @@
         android:id="@+id/cnav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        app:elevation="8dp"
         android:layout_gravity="end"
         app:headerLayout="@layout/layout_header_nav"
         android:elevation="8dp">
