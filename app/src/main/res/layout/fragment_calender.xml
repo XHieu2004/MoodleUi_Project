@@ -11,44 +11,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBarLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="60dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:layout_constraintBottom_toTopOf="@+id/calendarView"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="Calender"
+            android:textSize="25sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="50dp"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme" />
-        </com.google.android.material.appbar.AppBarLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/filter_button"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="100dp"
-            android:src="@drawable/baseline_filter_alt_24"
+            android:src="@drawable/filter_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/cmorebutton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="60dp"
             android:contentDescription="morebutton"
-            android:src="@drawable/cmorebutton"
+            android:src="@drawable/cmore_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

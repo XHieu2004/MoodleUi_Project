@@ -13,7 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.tabs.TabLayout;
+
 
 public class MainActivity extends AppCompatActivity {
     private ViewPager2 mViewPager2;
@@ -61,20 +61,21 @@ public class MainActivity extends AppCompatActivity {
         mBottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int menuid = item.getItemId();
-                if (menuid == R.id.home_dashboard) {
+                int menu_id = item.getItemId();
+                if (menu_id == R.id.home_dashboard) {
                     mViewPager2.setCurrentItem(0);
+
                     return true;
-                } else if (menuid == R.id.notifications_button) {
+                } else if (menu_id == R.id.notifications_button) {
                     mViewPager2.setCurrentItem(1);
                     return true;
-                } else if (menuid == R.id.calender_button) {
+                } else if (menu_id == R.id.calender_button) {
                     mViewPager2.setCurrentItem(2);
                     return true;
-                } else if (menuid == R.id.site_blog_button) {
+                } else if (menu_id == R.id.site_blog_button) {
                     mViewPager2.setCurrentItem(3);
                     return true;
-                } else if (menuid == R.id.more_button) {
+                } else if (menu_id == R.id.more_button) {
                     mViewPager2.setCurrentItem(4);
                     return true;
                 }
