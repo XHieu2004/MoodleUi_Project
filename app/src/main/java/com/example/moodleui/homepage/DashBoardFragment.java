@@ -24,27 +24,27 @@ public class DashBoardFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_dash_board, container, false);
 
         // Find views by their IDs
-        horizontalScrollView = view.findViewById(R.id.horizontal_view_courses);
-        Button buttonScrollLeft = view.findViewById(R.id.button_left);
-        Button buttonScrollRight = view.findViewById(R.id.button_right);
+        //horizontalScrollView = view.findViewById(R.id.horizontal_view_courses);
+        //Button buttonScrollLeft = view.findViewById(R.id.button_left);
+        //Button buttonScrollRight = view.findViewById(R.id.button_right);
 
         // Scroll Left Button functionality
-        buttonScrollLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        //buttonScrollLeft.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
                 // Scroll left by 200 pixels
-                horizontalScrollView.smoothScrollBy(-300, 0);
-            }
-        });
+        //        horizontalScrollView.smoothScrollBy(-300, 0);
+        //    }
+        //});
 
         // Scroll Right Button functionality
-        buttonScrollRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        //buttonScrollRight.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View v) {
                 // Scroll right by 200 pixels
-                horizontalScrollView.smoothScrollBy(300, 0);
-            }
-        });
+        //        horizontalScrollView.smoothScrollBy(300, 0);
+        //    }
+        //});
 
         return view; // Return the inflated view
     }
