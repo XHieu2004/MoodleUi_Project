@@ -32,11 +32,10 @@
         android:id="@+id/course_menu"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/cmorebutton"
+        android:src="@drawable/cmore_button"
         android:contentDescription="@string/more_options"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-    >
