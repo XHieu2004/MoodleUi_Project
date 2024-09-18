@@ -50,7 +50,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/right_arrow" />
+                android:src="@drawable/next_ic" />
         </LinearLayout>
 
         <LinearLayout
@@ -79,7 +79,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/right_arrow" />
+                android:src="@drawable/next_ic" />
         </LinearLayout>
 
         <LinearLayout
@@ -108,7 +108,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/right_arrow" />
+                android:src="@drawable/next_ic" />
         </LinearLayout>
 
         <LinearLayout
@@ -137,7 +137,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/right_arrow" />
+                android:src="@drawable/next_ic" />
         </LinearLayout>
 
         <LinearLayout
@@ -166,7 +166,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/right_arrow" />
+                android:src="@drawable/next_ic" />
         </LinearLayout>
 
     </LinearLayout>

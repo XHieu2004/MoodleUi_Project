@@ -11,35 +11,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Calender"
-            android:textSize="25sp"
-            android:textStyle="bold"
+            android:layout_marginEnd="60dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintBottom_toTopOf="@+id/calendarView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+        </com.google.android.material.appbar.AppBarLayout>
 
         <ImageView
             android:id="@+id/filter_button"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="100dp"
-            android:src="@drawable/filter_button"
+            android:src="@drawable/filter_calender"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/cmorebutton"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="60dp"
             android:contentDescription="morebutton"
-            android:src="@drawable/cmore_button"
+            android:src="@drawable/cmorebutton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,53 +93,24 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
-                <RadioGroup
-                    android:id="@+id/radio_group"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
 
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <RadioButton
-                        android:id="@+id/radioButton1"
+                        android:id="@+id/radioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layoutDirection="rtl"
-                        android:text="All corses" />
-
+                        android:text="RadioButton1" />
 
                     <RadioButton
                         android:id="@+id/radioButton2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layoutDirection="rtl"
-                        android:text="13 CHE1.002" />
-
-
-                    <RadioButton
-                        android:id="@+id/radioButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layoutDirection="rtl"
-                        android:text="13 ICT1.002" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layoutDirection="rtl"
-                        android:text="13ICT.003" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layoutDirection="rtl"
-                        android:text="13 ICT1.004" />
-
+                        android:layout_marginEnd="8dp"
+                        android:text="RadioButton2" />
                 </RadioGroup>
-
-
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>

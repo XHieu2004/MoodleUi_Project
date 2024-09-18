@@ -1,51 +1,66 @@
 package com.example.moodleui.homepage;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.HorizontalScrollView;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import com.example.moodleui.R;
 
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link DashBoardFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
 public class DashBoardFragment extends Fragment {
 
-    private HorizontalScrollView horizontalScrollView;
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
 
-    // Corrected method signature for onCreateView
-    @Nullable
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    public DashBoardFragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment DashBoardFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static DashBoardFragment newInstance(String param1, String param2) {
+        DashBoardFragment fragment = new DashBoardFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_dash_board, container, false);
-
-        // Find views by their IDs
-        horizontalScrollView = view.findViewById(R.id.horizontal_view_courses);
-        Button buttonScrollLeft = view.findViewById(R.id.button_left);
-        Button buttonScrollRight = view.findViewById(R.id.button_right);
-
-        // Scroll Left Button functionality
-        buttonScrollLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Scroll left by 200 pixels
-                horizontalScrollView.smoothScrollBy(-300, 0);
-            }
-        });
-
-        // Scroll Right Button functionality
-        buttonScrollRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Scroll right by 200 pixels
-                horizontalScrollView.smoothScrollBy(300, 0);
-            }
-        });
-
-        return view; // Return the inflated view
+        return inflater.inflate(R.layout.fragment_dash_board, container, false);
     }
 }
