@@ -92,71 +92,74 @@
         tools:layout_editor_absoluteX="0dp">
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/course_algorithm"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:backgroundTint="@null"
-            android:background="@null"
-            android:drawableStart="@drawable/ic_gray_academic"
-            android:drawableEnd="@drawable/baseline_more_vert_24"
-            android:drawablePadding="5dp"
-            android:drawableTint="@null"
-            android:text="@string/_114_s2_ict1_004_introduction_to_algorithms"
-            android:textAllCaps="false"
-            android:textSize="19dp"
-            app:layout_constraintBottom_toToptOf="@id/course_genetics"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp" />
+            android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/course_genetics"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/white"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
-            android:drawableStart="@drawable/ic_darkblue_academic"
-            android:drawableEnd="@drawable/baseline_more_vert_24"
-            android:text="@string/genetics_bi13_ba12"
-            android:textAllCaps="false"
-            android:textSize="19sp"
-            app:layout_constraintBottom_toToptOf="@id/course_mobile_wireless"
-            app:layout_constraintTop_toBottomOf="@id/course_algorithm"
-            tools:layout_editor_absoluteX="0dp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/course_algorithm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@null"
+                    android:backgroundTint="@null"
+                    android:drawableStart="@drawable/ic_gray_academic"
+                    android:drawableEnd="@drawable/baseline_more_vert_24"
+                    android:drawablePadding="5dp"
+                    android:drawableTint="@null"
+                    android:text="@string/_114_s2_ict1_004_introduction_to_algorithms"
+                    android:textAllCaps="false"
+                    android:textSize="19dp"
+                    app:layout_constraintBottom_toToptOf="@id/course_genetics" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/course_mobile_wireless"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
-            android:backgroundTint="@color/white"
-            android:drawableStart="@drawable/ic_blue_academic"
-            android:drawableEnd="@drawable/baseline_more_vert_24"
-            android:text="@string/mobile_wireless_bi13_ba12"
-            android:textAllCaps="false"
-            android:textSize="19sp"
-            app:layout_constraintBottom_toToptOf="@id/course_os"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/course_genetics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/white"
 
-            app:layout_constraintTop_toBottomOf="@+id/course_algorithm"
-            tools:layout_editor_absoluteX="0dp" />
+                    android:drawableStart="@drawable/ic_darkblue_academic"
+                    android:drawableEnd="@drawable/baseline_more_vert_24"
+                    android:text="@string/genetics_bi13_ba12"
+                    android:textAllCaps="false"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toToptOf="@id/course_mobile_wireless" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/course_os"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:drawableStart="@drawable/ic_2darkblue_academic"
-            android:drawableEnd="@drawable/baseline_more_vert_24"
-            android:text="@string/operating_systems"
-            android:textSize="19dp"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/course_mobile_wireless"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/course_mobile_wireless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="68dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_blue_academic"
+                    android:drawableEnd="@drawable/baseline_more_vert_24"
+                    android:text="@string/mobile_wireless_bi13_ba12"
+                    android:textAllCaps="false"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toToptOf="@id/course_os"
 
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="0dp" />
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/course_os"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_2darkblue_academic"
+                    android:drawableEnd="@drawable/baseline_more_vert_24"
+                    android:text="@string/operating_systems"
+                    android:textAllCaps="false"
+                    android:textSize="19dp"
+
+                    />
+            </LinearLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
