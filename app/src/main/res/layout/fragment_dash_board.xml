@@ -96,16 +96,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scroll_courses"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/course_algorithm"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
                     android:background="@null"
                     android:backgroundTint="@null"
                     android:drawableStart="@drawable/ic_gray_academic"
@@ -115,40 +116,48 @@
                     android:text="@string/_114_s2_ict1_004_introduction_to_algorithms"
                     android:textAllCaps="false"
                     android:textSize="19dp"
-                    app:layout_constraintBottom_toToptOf="@id/course_genetics" />
+                    app:layout_constraintBottom_toToptOf="@id/course_genetics"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/course_genetics"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:backgroundTint="@color/white"
 
+                    android:backgroundTint="@color/white"
                     android:drawableStart="@drawable/ic_darkblue_academic"
                     android:drawableEnd="@drawable/baseline_more_vert_24"
                     android:text="@string/genetics_bi13_ba12"
                     android:textAllCaps="false"
                     android:textSize="19sp"
-                    app:layout_constraintBottom_toToptOf="@id/course_mobile_wireless" />
+                    app:layout_constraintBottom_toToptOf="@id/course_mobile_wireless"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/course_algorithm" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/course_mobile_wireless"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="68dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="69dp"
                     android:backgroundTint="@color/white"
                     android:drawableStart="@drawable/ic_blue_academic"
                     android:drawableEnd="@drawable/baseline_more_vert_24"
                     android:text="@string/mobile_wireless_bi13_ba12"
                     android:textAllCaps="false"
+
                     android:textSize="19sp"
                     app:layout_constraintBottom_toToptOf="@id/course_os"
-
-                    />
+                    app:layout_constraintStart_toStartOf="@+id/course_os"
+                    app:layout_constraintTop_toBottomOf="@+id/course_genetics"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/course_os"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:drawableStart="@drawable/ic_2darkblue_academic"
@@ -157,8 +166,11 @@
                     android:textAllCaps="false"
                     android:textSize="19dp"
 
-                    />
-            </LinearLayout>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/course_mobile_wireless"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
