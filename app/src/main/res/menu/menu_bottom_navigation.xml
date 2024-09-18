@@ -7,15 +7,15 @@
     <item
         android:id="@+id/notifications_button"
         android:title=""
-        android:icon ="@drawable/moodle_notification"/>
+        android:icon ="@drawable/notification"/>
     <item
         android:id="@+id/calender_button"
         android:title=""
-        android:icon="@drawable/moodle_calender"/>
+        android:icon="@drawable/moodle_calendar"/>
     <item
         android:id="@+id/site_blog_button"
         android:title=""
-        android:icon="@drawable/moodle_site_blog"/>
+        android:icon="@drawable/moodle_blog"/>
     <item
         android:id="@+id/more_button"
         android:title=""

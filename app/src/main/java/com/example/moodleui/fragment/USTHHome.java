@@ -3,6 +3,7 @@ package com.example.moodleui.fragment;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +33,7 @@ public class USTHHome extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_usth_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_u_s_t_h_home, container, false);
 
         hviewPager2 = view.findViewById(R.id.hviewPager2);
         htabLayout = view.findViewById(R.id.htabLayout);
