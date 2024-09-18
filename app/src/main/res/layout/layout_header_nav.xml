@@ -1,42 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:elevation="8dp"
-    >
+    android:layout_marginStart="50dp"
+    android:padding="16dp">
 
+    <!-- Site events Switch -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/site_events_ic"
+            android:layout_marginEnd="8dp" />
 
         <Switch
             android:id="@+id/switch1"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Site events" />
     </LinearLayout>
 
+    <!-- Category events Switch -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="vertical"></LinearLayout>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/category_events_ic"
+            android:layout_marginEnd="8dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="vertical">
-
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Category events" />
     </LinearLayout>
 
+    <!-- Course events Switch -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/course_events_ic"
+            android:layout_marginEnd="8dp" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Course events" />
+    </LinearLayout>
+
+    <!-- Group events Switch -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/group_events_ic"
+            android:layout_marginEnd="8dp" />
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Group events" />
+    </LinearLayout>
+
+    <!-- User events Switch -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/user_events_ic"
+            android:layout_marginEnd="8dp" />
+
+        <Switch
+            android:id="@+id/switch5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="User events" />
+    </LinearLayout>
+
 </LinearLayout>
