@@ -63,8 +63,8 @@ public class CalenderFragment extends Fragment {
 
         ImageView filterButton = view.findViewById(R.id.filter_button);
         filterButton.setOnClickListener(view12 -> {
-            if (drawerLayout != null && !drawerLayout.isDrawerOpen(GravityCompat.END)) {
-                drawerLayout.openDrawer(GravityCompat.END);
+            if (drawerLayout != null && !drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
 

@@ -98,6 +98,7 @@
                 app:layout_constraintTop_toBottomOf="@id/s_line">
 
                 <LinearLayout
+                    android:id="@+id/grades_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?android:attr/selectableItemBackground"
@@ -253,14 +254,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
 
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="200dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/log_out_button" />
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="105dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/moodle_log_out_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:text="Log out"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </LinearLayout>

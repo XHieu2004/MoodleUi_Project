@@ -1,10 +1,12 @@
 package com.example.moodleui;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.navigation.NavigationView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView mBottomNavigationView;
     private DrawerLayout mDrawerLayout;
     private ImageView mImageView;
-
+    private NavigationView mainNav;
+    private LinearLayout gradeButton;
 
 
     @Override
@@ -31,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         mBottomNavigationView = findViewById(R.id.bottom_navigation);
         mDrawerLayout = findViewById(R.id.main);
         mImageView = findViewById(R.id.imageView);
+        mainNav = findViewById(R.id.main_nav);
+        gradeButton = findViewById(R.id.grades_button);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         mViewPager2.setAdapter(adapter);
@@ -85,10 +91,16 @@ public class MainActivity extends AppCompatActivity {
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("MainActivity", "ImageView clicked");
                 if (!mDrawerLayout.isDrawerOpen(GravityCompat.END)) {
                     mDrawerLayout.openDrawer(GravityCompat.END);
                 }
+            }
+        });
+        gradeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Grades.class);
+                startActivity(intent);
             }
         });
         }
