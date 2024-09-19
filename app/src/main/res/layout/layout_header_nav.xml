@@ -143,6 +143,4 @@
             android:layout_height="wrap_content"
             android:id="@+id/toggle_user_events" />
     </LinearLayout>
-
-
 </LinearLayout>
