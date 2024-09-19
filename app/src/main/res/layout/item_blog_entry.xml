@@ -1,0 +1,63 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Title and content for the blog entry -->
+    <TextView
+        android:id="@+id/tv_blog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blog Title"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_blog_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posted by Username"
+        android:textColor="#888888"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tv_blog_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blog content goes here."
+        android:layout_marginTop="8dp" />
+
+    <!-- Comments section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <!-- Add a comment -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/et_add_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Add a comment"
+            android:padding="8dp"
+            android:background="@drawable/comment_input_background"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_add_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post" />
+    </LinearLayout>
+
+</LinearLayout>
