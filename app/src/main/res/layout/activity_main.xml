@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -80,7 +81,7 @@
             <FrameLayout
                 android:id="@+id/s_line"
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="#504646"
                 app:layout_constraintBottom_toTopOf="@id/linearLayout_bottom"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -174,6 +175,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/blog_entries_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?android:attr/selectableItemBackground"
@@ -197,7 +199,19 @@
 
                 </LinearLayout>
 
+                <FrameLayout
+                    android:id="@+id/s_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#504646"
+                    app:layout_constraintBottom_toTopOf="@id/preferences_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/blog_entries_button">
+
+                </FrameLayout>
+
                 <LinearLayout
+                    android:id="@+id/preferences_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?android:attr/selectableItemBackground"
@@ -222,7 +236,18 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <FrameLayout
+                android:id="@+id/s_line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#504646"
+                app:layout_constraintBottom_toTopOf="@id/switch_and_log_out"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            </FrameLayout>
+
             <LinearLayout
+                android:id="@+id/switch_and_log_out"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -230,6 +255,7 @@
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <LinearLayout
+                    android:id="@+id/switch_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?android:attr/selectableItemBackground"
@@ -253,7 +279,19 @@
 
                 </LinearLayout>
 
+                <FrameLayout
+                    android:id="@+id/s_line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#504646"
+                    app:layout_constraintBottom_toTopOf="@id/log_out_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/switch_button">
+
+                </FrameLayout>
+
                 <LinearLayout
+                    android:id="@+id/log_out_button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="?android:attr/selectableItemBackground"

@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView mainNav;
     private LinearLayout gradesButton;
     private LinearLayout filesButton;
+    private LinearLayout badgesButton;
+    private LinearLayout blog_entriesButton;
+    private LinearLayout preferencesButton;
 
 
     @Override
@@ -39,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         mainNav = findViewById(R.id.main_nav);
         gradesButton = findViewById(R.id.grades_button);
         filesButton = findViewById(R.id.files_button);
+        badgesButton = findViewById(R.id.badges_button);
+        blog_entriesButton = findViewById(R.id.blog_entries_button);
+        preferencesButton = findViewById(R.id.preferences_button);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         mViewPager2.setAdapter(adapter);
@@ -98,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //Preview user account element activities:
         gradesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,6 +120,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        badgesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(MainActivity.this, Badges.class);
+                startActivity(intent2);
+            }
+        });
+        blog_entriesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(MainActivity.this, BlogEntries.class);
+                startActivity(intent3);
+            }
+        });
+        preferencesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent4 = new Intent(MainActivity.this, Preferences.class);
+                startActivity(intent4);
+            }
+        });
+
         }
     }
 
