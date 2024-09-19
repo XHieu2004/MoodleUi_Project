@@ -89,7 +89,7 @@
         <!-- Text for App Settings -->
 
         <Button
-            android:id="@+id/settings_button"
+            android:id="@+id/btnappsettings_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="App settings"

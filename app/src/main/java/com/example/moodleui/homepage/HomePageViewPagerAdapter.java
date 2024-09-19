@@ -7,12 +7,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 
 
-import com.example.moodleui.fragment.CalenderFragment;
-import com.example.moodleui.fragment.More_Fragment;
-import com.example.moodleui.fragment.Notifacations_Fragment;
-import com.example.moodleui.fragment.SiteBlog_Fragment;
-import com.example.moodleui.fragment.USTHHome;
-
 public class HomePageViewPagerAdapter extends FragmentStateAdapter {
     public HomePageViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
@@ -36,12 +30,6 @@ public class HomePageViewPagerAdapter extends FragmentStateAdapter {
     public int getItemCount() {
         return 2;
     }
-//    public String getPageTitle(int position){
-//        switch(position){
-//
-//        }
-//    }
-
 
 }
 

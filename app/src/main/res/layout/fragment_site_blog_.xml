@@ -54,7 +54,7 @@
             android:layout_width="253dp"
             android:layout_height="259dp"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:src="@drawable/moodlesiteblogbutton"
+            android:src="@drawable/moodle_site_blog"
             app:tint="#907A7A" />
 
         <TextView
