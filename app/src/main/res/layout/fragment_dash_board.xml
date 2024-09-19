@@ -279,7 +279,7 @@
                     android:padding="5dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/scroll_course_4"
+                    android:id="@+id/scroll_courses_4"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ic_big_2darkblue"
