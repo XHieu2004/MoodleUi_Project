@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MoodleUI"
         tools:targetApi="31">
         <activity
+            android:name=".Files"
+            android:exported="false" />
+        <activity
             android:name=".Grades"
             android:exported="false" />
         <activity

@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/backButton"
+            android:id="@+id/g_backButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
             app:srcCompat="@drawable/back_icon" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/grades_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="72dp"

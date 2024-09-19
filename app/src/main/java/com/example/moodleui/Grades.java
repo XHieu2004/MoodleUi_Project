@@ -17,7 +17,7 @@ public class Grades extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_grades);
-        backButton = findViewById(R.id.backButton);
+        backButton = findViewById(R.id.g_backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

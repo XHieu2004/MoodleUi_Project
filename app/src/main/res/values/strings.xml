@@ -22,13 +22,27 @@
     <string name="course_overview">Course Overview</string>
     <string name="sorting_subjects">Sorting Subjects</string>
     <string name="grid_four">Grid Four</string>
-    <string name="introduction_to_algorithms">Introduction to Algorithms</string>
+    <string name="introduction_to_algorithms">Intro to Algorithms</string>
     <string name="_114_s2_ict1_004_introduction_to_algorithms">[114-S2] ICT1.004 Introduction to algorithms</string>
-    <string name="genetics_bi13_ba12"> Genetics BI13-BA12 </string>
-    <string name="mobile_wireless_bi13_ba12">Mobile Wireless Communication (2023-2024)</string>
-    <string name="operating_systems">Operating Systems</string>
+    <string name="genetics_bi13_ba12"> Genetics   BI13-BA12 </string>
+    <string name="mobile_wireless_bi13_ba12">Mobile Wireless</string>
+    <string name="operating_systems">Operating   Systems</string>
     <string name="recently_accessed_courses">Recently accessed courses</string>
     <string name="right_button">Right Button</string>
     <string name="left_button">Left Button</string>
+    <string name="all_including_removed">All (including removed from view)</string>
+    <string name="all">All</string>
+    <string name="future">Future</string>
+    <string name="past">Past</string>
+    <string name="starred">Starred</string>
+    <string name="remove_from_view">Removed from view</string>
+
+
+
+
+
+
+
+
 
 </resources>

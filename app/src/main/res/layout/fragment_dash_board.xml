@@ -153,24 +153,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/course_genetics"
-                    app:layout_constraintVertical_bias="0.0" />
+                    />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/course_os"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:backgroundTint="@color/white"
                     android:drawableStart="@drawable/ic_2darkblue_academic"
                     android:drawableEnd="@drawable/baseline_more_vert_24"
                     android:text="@string/operating_systems"
                     android:textAllCaps="false"
-
                     android:textSize="19dp"
+                    app:layout_constraintTop_toBottomOf="@+id/course_mobile_wireless"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/course_mobile_wireless" />
+                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
@@ -202,7 +201,7 @@
 
         <LinearLayout
             android:id="@+id/scroll_buttons"
-            android:layout_width="146dp"
+            android:layout_width="100dp"
             android:layout_height="48dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -235,7 +234,7 @@
 
         <HorizontalScrollView
             android:id="@+id/horizontal_view_courses"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="200dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -245,46 +244,62 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
+
                 >
 
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/scroll_course_1"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:layout_weight="8"
                     android:drawableTop="@drawable/ic_big_gray_aca"
                     android:background="@color/white"
                     android:text="@string/introduction_to_algorithms"
                     android:textAllCaps="false"
-                    android:textSize="20dp"
-                    android:padding="5dp"/>
+                    android:padding="5dp"
+                    android:maxLines="1"
+                    />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/scroll_course_2"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:layout_weight="8"
                     android:drawableTop="@drawable/ic_big_darkblue"
                     android:background="@color/white"
                     android:text="@string/genetics_bi13_ba12"
-                    android:padding="5dp"/>
+                    android:maxLines="1"
+
+                    android:padding="5dp"
+                    />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/scroll_course_3"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@drawable/ic_big_blue"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="8"
                     android:background="@color/white"
+                    android:drawableTop="@drawable/ic_big_blue"
+                    android:gravity="center"
+                    android:padding="5dp"
                     android:text="@string/mobile_wireless_bi13_ba12"
-                    android:padding="5dp"/>
+                    android:maxLines="1"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/scroll_course_4"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:layout_weight="8"
                     android:drawableTop="@drawable/ic_big_2darkblue"
                     android:background="@color/white"
                     android:text="@string/operating_systems"
-                    android:padding="5dp"/>
+                    android:padding="5dp"
+                    android:maxLines="1"
+                    />
 
 
             </LinearLayout>
