@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ImageView mImageView;
     private NavigationView mainNav;
-    private LinearLayout gradeButton;
+    private LinearLayout gradesButton;
+    private LinearLayout filesButton;
 
 
     @Override
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = findViewById(R.id.main);
         mImageView = findViewById(R.id.imageView);
         mainNav = findViewById(R.id.main_nav);
-        gradeButton = findViewById(R.id.grades_button);
+        gradesButton = findViewById(R.id.grades_button);
+        filesButton = findViewById(R.id.files_button);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         mViewPager2.setAdapter(adapter);
@@ -96,11 +98,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        gradeButton.setOnClickListener(new View.OnClickListener() {
+        gradesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Grades.class);
                 startActivity(intent);
+            }
+        });
+        filesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(MainActivity.this, Files.class);
+                startActivity(intent1);
             }
         });
         }

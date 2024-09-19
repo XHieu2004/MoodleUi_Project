@@ -57,12 +57,21 @@ public class DashBoardFragment extends Fragment {
                 popupMenu.getMenuInflater().inflate(R.menu.in_progress_menu, popupMenu.getMenu());
 
                 // Show the popup menu
-
+                popupMenu.show();
 
                 // Handle menu item clicks
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
+                        // Uncheck all items
+                        for (int i = 0; i < popupMenu.getMenu().size(); i++) {
+                            popupMenu.getMenu().getItem(i).setChecked(false);
+                        }
+
+                        // Check the clicked item
+                        item.setChecked(true);
+
+                        // Replace switch-case with if-else
                         int itemId = item.getItemId();
                         if (itemId == R.id.all_including_removed) {
                             // Handle "All (including removed from view)" action
@@ -79,27 +88,17 @@ public class DashBoardFragment extends Fragment {
                         } else if (itemId == R.id.past) {
                             // Handle "Past" action
                             return true;
-                        } else if (itemId == R.id.starred){
+                        } else // Handle "Removed from view" action
+                            if (itemId == R.id.starred) {
+                                // Handle "Starred" action
                                 return true;
-                            } else if (itemId == R.id.removed_from_view){
-                            return true;
-
-                        }
-                        else {
-                            return false;
-                        }
-
-                        // Check the clicked item
-
-
-                        // Replace switch-case with if-else
-
+                            } else return itemId == R.id.removed_from_view;
                     }
                 });
-                popupMenu.show();
             }
         });
 
-        return view;
+        return view; // Return the inflated view
     }
 }
+

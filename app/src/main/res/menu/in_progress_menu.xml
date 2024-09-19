@@ -1,0 +1,38 @@
+<!-- res/menu/in_progress_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/all_including_removed"
+        android:title="@string/all_including_removed"
+        android:checkable="true"
+        android:checked="false" />
+    <item
+        android:id="@+id/all"
+        android:title="@string/all"
+        android:checkable="true"
+        android:checked="false" />
+    <item
+        android:id="@+id/in_progress"
+        android:title="@string/in_progress"
+        android:checkable="true"
+        android:checked="true" />
+    <item
+        android:id="@+id/future"
+        android:title="@string/future"
+        android:checkable="true"
+        android:checked="false" />
+    <item
+        android:id="@+id/past"
+        android:title="@string/past"
+        android:checkable="true"
+        android:checked="false" />
+    <item
+        android:id="@+id/starred"
+        android:title="@string/starred"
+        android:checkable="true"
+        android:checked="false" />
+    <item
+        android:id="@+id/removed_from_view"
+        android:title="@string/remove_from_view"
+        android:checkable="true"
+        android:checked="false" />
+</menu>
