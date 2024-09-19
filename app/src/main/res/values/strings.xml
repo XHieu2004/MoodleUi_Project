@@ -30,8 +30,5 @@
     <string name="recently_accessed_courses">Recently accessed courses</string>
     <string name="right_button">Right Button</string>
     <string name="left_button">Left Button</string>
-    <string name="loading_courses">Loading Course</string>
-    <string name="course_progress">Course Progess</string>
-
 
 </resources>
