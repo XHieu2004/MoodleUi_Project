@@ -22,13 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager2 mViewPager2;
     private BottomNavigationView mBottomNavigationView;
     private DrawerLayout mDrawerLayout;
-    private ImageView mImageView;
-    private NavigationView mainNav;
-    private LinearLayout gradesButton;
-    private LinearLayout filesButton;
-    private LinearLayout badgesButton;
-    private LinearLayout blog_entriesButton;
-    private LinearLayout preferencesButton;
 
 
     @Override
@@ -38,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         mViewPager2 = findViewById(R.id.view_pager_2);
         mBottomNavigationView = findViewById(R.id.bottom_navigation);
         mDrawerLayout = findViewById(R.id.main);
-        mImageView = findViewById(R.id.imageView);
-        mainNav = findViewById(R.id.main_nav);
-        gradesButton = findViewById(R.id.grades_button);
-        filesButton = findViewById(R.id.files_button);
-        badgesButton = findViewById(R.id.badges_button);
-        blog_entriesButton = findViewById(R.id.blog_entries_button);
-        preferencesButton = findViewById(R.id.preferences_button);
+        ImageView mImageView = findViewById(R.id.imageView);
+        NavigationView mainNav = findViewById(R.id.main_nav);
+        LinearLayout gradesButton = findViewById(R.id.grades_button);
+        LinearLayout filesButton = findViewById(R.id.files_button);
+        LinearLayout badgesButton = findViewById(R.id.badges_button);
+        LinearLayout blog_entriesButton = findViewById(R.id.blog_entries_button);
+        LinearLayout preferencesButton = findViewById(R.id.preferences_button);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         mViewPager2.setAdapter(adapter);
@@ -99,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!mDrawerLayout.isDrawerOpen(GravityCompat.END)) {
+                if (mDrawerLayout != null && !mDrawerLayout.isDrawerOpen(GravityCompat.END)) {
                     mDrawerLayout.openDrawer(GravityCompat.END);
                 }
             }

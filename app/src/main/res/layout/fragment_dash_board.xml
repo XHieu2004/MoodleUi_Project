@@ -55,11 +55,12 @@
         android:id="@+id/additional_buttons_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:elevation="8dp"
         android:orientation="vertical"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/in_progress"
         app:layout_constraintStart_toStartOf="@id/in_progress"
-        android:layout_marginTop="8dp">
+        app:layout_constraintTop_toBottomOf="@id/in_progress">
 
         <!-- Button for "All (including removed from view)" -->
         <androidx.appcompat.widget.AppCompatButton
@@ -69,8 +70,8 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="@string/all_including_removed"
-            android:textAllCaps="false"
-            android:textAlignment="viewStart"/>
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
 
         <!-- Button for "All" -->
         <androidx.appcompat.widget.AppCompatButton
@@ -80,8 +81,8 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="@string/all"
-            android:textAllCaps="false"
-            android:textAlignment="viewStart"/>
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
 
         <!-- Button for "In Progress" -->
         <androidx.appcompat.widget.AppCompatButton
@@ -91,8 +92,8 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="@string/in_progress"
-            android:textAllCaps="false"
-            android:textAlignment="viewStart"/>
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
 
         <!-- Button for "Future" -->
         <androidx.appcompat.widget.AppCompatButton
@@ -102,8 +103,8 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="@string/future"
-            android:textAllCaps="false"
-            android:textAlignment="viewStart"/>
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
 
         <!-- Button for "Past" -->
         <androidx.appcompat.widget.AppCompatButton
@@ -113,8 +114,8 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="@string/past"
-            android:textAllCaps="false"
-            android:textAlignment="viewStart"/>
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
 
         <!-- Button for "Starred" -->
         <androidx.appcompat.widget.AppCompatButton
@@ -124,8 +125,8 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="@string/starred"
-            android:textAllCaps="false"
-            android:textAlignment="viewStart"/>
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
 
         <!-- Button for "Removed from view" -->
         <androidx.appcompat.widget.AppCompatButton
@@ -135,8 +136,8 @@
             android:backgroundTint="@color/white"
             android:padding="16dp"
             android:text="@string/removed_from_view"
-            android:textAllCaps="false"
-            android:textAlignment="viewStart"/>
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 
