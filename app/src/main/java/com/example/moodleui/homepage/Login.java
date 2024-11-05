@@ -1,12 +1,16 @@
 // LoginActivity.java
 package com.example.moodleui.homepage;
 
+import static androidx.core.content.ContentProviderCompat.requireContext;
+
 import android.content.SharedPreferences;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,5 +52,26 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
+        TextView register = findViewById(R.id.tv_register);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Login.this, Register.class);
+                startActivity(i);
+            }
+        });
+
+        TextView forgotPassword = findViewById(R.id.tv_forgot_password);
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Login.this, ForgotPassword.class);
+                startActivity(i);
+            }
+        });
+
+
     }
+
 }
