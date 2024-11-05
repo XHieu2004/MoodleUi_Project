@@ -1,6 +1,7 @@
 package com.example.moodleui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.view.MenuItem;
@@ -12,7 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
+
+import com.example.moodleui.homepage.Login;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -27,6 +33,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+
+        if (!isLoggedIn) {
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish(); // Close MainActivity if not logged in
+            return; // Prevent further processing
+        }
+
+        setContentView(R.layout.activity_main);
+        // Rest of your code...
+
         setContentView(R.layout.activity_main);
         mViewPager2 = findViewById(R.id.view_pager_2);
         mBottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -38,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout badgesButton = findViewById(R.id.badges_button);
         LinearLayout blog_entriesButton = findViewById(R.id.blog_entries_button);
         LinearLayout preferencesButton = findViewById(R.id.preferences_button);
+        LinearLayout logoutButton = findViewById(R.id.log_out_button);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         mViewPager2.setAdapter(adapter);
@@ -134,9 +157,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent4);
             }
         });
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("isLoggedIn", false);
+                editor.apply();
 
-        }
+                // Navigate to LoginActivity and clear the back stack
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish(); // Close MainActivity
+            }
+        });
     }
+}
 
 
 

@@ -28,6 +28,9 @@
             android:name=".Grades"
             android:exported="false" />
         <activity
+            android:name=".homepage.Login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
