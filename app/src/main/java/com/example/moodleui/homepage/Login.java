@@ -75,18 +75,18 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            // Kiểm tra nếu response có token, tức là login thành công
+
                             if (response.has("token")) {
                                 String token = response.getString("token");
 
-                                // Lưu token vào SharedPreferences để sử dụng cho các request sau
+
                                 SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putBoolean("isLoggedIn", true);
-                                editor.putString("token", token); // Lưu token
+                                editor.putString("token", token);
                                 editor.apply();
 
-                                // Chuyển sang màn hình chính
+
                                 Intent intent = new Intent(Login.this, MainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
@@ -112,19 +112,19 @@ public class Login extends AppCompatActivity {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> headers = new HashMap<>();
-                headers.put("Content-Type", "application/json"); // Đổi header thành application/json
+                headers.put("Content-Type", "application/json"); 
                 return headers;
             }
         };
 
-        // Thiết lập retry policy
+
         jsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(
                 10000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
         ));
 
-        // Gửi yêu cầu
+
         RequestQueue queue = Volley.newRequestQueue(this);
         queue.add(jsonObjectRequest);
     }
