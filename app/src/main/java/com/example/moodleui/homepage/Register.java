@@ -30,7 +30,7 @@ public class Register extends AppCompatActivity {
 
     private EditText editUserName, editRole, editPhone, editDateOfBirth, editAddress, editTextEmail, editTextPassword, editTextConfirmPassword;
     private Button buttonRegister;
-    private static final String REGISTER_URL = "https://954f-118-70-176-212.ngrok-free.app/api/auth/register";
+    private static final String REGISTER_URL = "https://jylzwx-ip-118-70-176-212.tunnelmole.net/api/auth/register";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

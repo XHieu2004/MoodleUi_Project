@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
 
     private EditText usernameEditText, passwordEditText;
     private Button loginButton;
-    private static final String LOGIN_URL = "https://954f-118-70-176-212.ngrok-free.app/api/auth/login";
+    private static final String LOGIN_URL = "https://jylzwx-ip-118-70-176-212.tunnelmole.net/api/auth/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
