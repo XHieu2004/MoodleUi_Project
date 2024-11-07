@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +33,7 @@ public class Login extends AppCompatActivity {
 
     private EditText usernameEditText, passwordEditText;
     private Button loginButton;
-    private static final String LOGIN_URL = "https://0b9c-2405-4802-1d52-86d0-4c67-c2fd-943b-c41.ngrok-free.app/api/auth/login";
+    private static final String LOGIN_URL = "https://954f-118-70-176-212.ngrok-free.app/api/auth/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,25 +44,31 @@ public class Login extends AppCompatActivity {
         passwordEditText = findViewById(R.id.et_password);
         loginButton = findViewById(R.id.btn_login);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        TextView register = findViewById(R.id.tv_register);
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String username = usernameEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
+            public void onClick(View view) {
+                Intent i = new Intent(Login.this, Register.class);
+                startActivity(i);
+            }
+        });
 
-                Log.d("LoginRequest", "Username: " + username + ", Password: " + password);
+        loginButton.setOnClickListener(v -> {
+            String username = usernameEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
 
-                if (!username.isEmpty() && !password.isEmpty()) {
-                    loginUser(username, password);
-                } else {
-                    Toast.makeText(Login.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
-                }
+//                Log.d("LoginRequest", "Username: " + username + ", Password: " + password);
+
+            if (!username.isEmpty() && !password.isEmpty()) {
+                loginUser(username, password);
+            } else {
+                Toast.makeText(Login.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+
     private void loginUser(String username, String password) {
-        // Tạo JSONObject để gửi yêu cầu
         JSONObject jsonParams = new JSONObject();
         try {
             jsonParams.put("username", username);
