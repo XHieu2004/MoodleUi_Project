@@ -1,7 +1,6 @@
 package com.example.moodleui.homepage;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +29,7 @@ public class Register extends AppCompatActivity {
 
     private EditText editUserName, editRole, editPhone, editDateOfBirth, editAddress, editTextEmail, editTextPassword, editTextConfirmPassword;
     private Button buttonRegister;
-    private static final String REGISTER_URL = "https://jylzwx-ip-118-70-176-212.tunnelmole.net/api/auth/register";
+    private static final String REGISTER_URL = " https://1a2f-2405-4802-1d52-86d0-e01d-8a97-cc2d-f96d.ngrok-free.app/api/auth/register";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,16 +57,9 @@ public class Register extends AppCompatActivity {
             String password = editTextPassword.getText().toString().trim();
             String confirmPassword = editTextConfirmPassword.getText().toString();
 
-
             if (validateRegister(username) && validateRegister(role) && validateRegister(phone) &&
                     validateRegister(dOb) && validateRegister(address) && validateRegister(email) &&
                     validateRegister(password) && validateRegister(confirmPassword)) {
-
-                SharedPreferences sharedPreferences = getSharedPreferences("toRegister", MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putBoolean("isRegister", true);
-                editor.apply();
-
 
                 registerUser(username, role, phone, dOb, address, email, password);
 
@@ -90,7 +82,6 @@ public class Register extends AppCompatActivity {
         super.onBackPressed();
     }
 
-
     private void registerUser(String username, String role, String phone, String dOb, String address, String email, String password) {
         JSONObject jsonParams = new JSONObject();
         try {
@@ -111,14 +102,6 @@ public class Register extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             if (response.has("token")) {
-                                String token = response.getString("token");
-
-//                                SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
-//                                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                                editor.putBoolean("isLoggedIn", true);
-//                                editor.putString("token", token);
-//                                editor.apply();
-
                                 Intent intent = new Intent(Register.this, MainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
