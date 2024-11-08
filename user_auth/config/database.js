@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
 
-const sequelize = new Sequelize('user_database', 'root', 'root', {
+const sequelize = new Sequelize('user_database', 'users', '1', {
     host: 'localhost', 
     port: 3305, 
     dialect: 'mysql',
