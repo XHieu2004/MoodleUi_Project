@@ -1,22 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment.SiteBlog_Fragment">
+    android:layout_height="match_parent">
 
-    <!-- Heading for Site Blog -->
+    <!-- Site Blog Heading -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/site_blog_head"
+        android:text="Site Blog"
         android:textSize="25sp"
         android:textStyle="bold"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp" />
 
-    <!-- Toggle switch for "Show only your entries" -->
+    <!-- Toggle switch for entries -->
     <LinearLayout
         android:id="@+id/entries_toggle_layout"
         android:layout_width="wrap_content"
@@ -31,19 +28,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Show only your entries"
-            android:textSize="16sp"
-            android:paddingEnd="170dp" />
+            android:textSize="16sp" />
 
         <Switch
             android:id="@+id/switch_show_entries"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:checked="false" />
     </LinearLayout>
 
-    <!-- Image and text below (centered) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_blog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/entries_toggle_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="8dp"
+        android:visibility="visible" />
+
+
+    <!-- Empty view when no blog entries -->
     <LinearLayout
+        android:id="@+id/empty_layout"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
@@ -53,7 +61,7 @@
             android:id="@+id/imageView2"
             android:layout_width="253dp"
             android:layout_height="259dp"
-            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal"
             android:src="@drawable/moodle_site_blog"
             app:tint="#907A7A" />
 
@@ -62,8 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/site_blog_text"
+            android:text="No blog entries available."
             android:textSize="20sp" />
     </LinearLayout>
-
 </RelativeLayout>
