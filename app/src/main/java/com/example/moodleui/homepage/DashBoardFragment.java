@@ -1,5 +1,6 @@
 package com.example.moodleui.homepage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,19 +19,18 @@ public class DashBoardFragment extends Fragment {
     private Button inProgressButton;
     private LinearLayout additionalButtonsContainer;
 
-    // Corrected method signature for onCreateView
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dash_board, container, false);
 
-        // Scroll functionality components
+        // Initialize scroll functionality components
         horizontalScrollView = view.findViewById(R.id.horizontal_view_courses);
         Button buttonScrollLeft = view.findViewById(R.id.button_left);
         Button buttonScrollRight = view.findViewById(R.id.button_right);
 
-        // In Progress button and the additional buttons container
+        // Initialize In Progress button and additional buttons container
         inProgressButton = view.findViewById(R.id.in_progress);
         additionalButtonsContainer = view.findViewById(R.id.additional_buttons_container);
         Button buttonAllIncludingRemoved = view.findViewById(R.id.button_all_including_removed);
@@ -42,93 +42,45 @@ public class DashBoardFragment extends Fragment {
         Button buttonRemoved = view.findViewById(R.id.button_removed);
 
         // Scroll Left Button functionality
-        buttonScrollLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Scroll left by 300 pixels
-                horizontalScrollView.smoothScrollBy(-300, 0);
-            }
-        });
+        buttonScrollLeft.setOnClickListener(v -> horizontalScrollView.smoothScrollBy(-300, 0));
 
         // Scroll Right Button functionality
-        buttonScrollRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Scroll right by 300 pixels
-                horizontalScrollView.smoothScrollBy(300, 0);
-            }
-        });
+        buttonScrollRight.setOnClickListener(v -> horizontalScrollView.smoothScrollBy(300, 0));
 
-        // Set onClick listener for the "In Progress" button
-        inProgressButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Toggle visibility of the additional buttons
-                if (additionalButtonsContainer.getVisibility() == View.GONE) {
-                    additionalButtonsContainer.setVisibility(View.VISIBLE);
-                } else {
-                    additionalButtonsContainer.setVisibility(View.GONE);
-                }
-            }
-        });
-
-        // Set onClick listeners for the additional buttons
-        buttonAllIncludingRemoved.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inProgressButton.setText(R.string.all_including_removed);
+        // Toggle visibility of additional buttons when "In Progress" button is clicked
+        inProgressButton.setOnClickListener(v -> {
+            if (additionalButtonsContainer.getVisibility() == View.GONE) {
+                additionalButtonsContainer.setVisibility(View.VISIBLE);
+            } else {
                 additionalButtonsContainer.setVisibility(View.GONE);
             }
         });
 
-        buttonAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inProgressButton.setText(R.string.all);
-                additionalButtonsContainer.setVisibility(View.GONE);
-            }
-        });
+        // Set onClick listeners for each additional button, updating the inProgressButton text and hiding the additional buttons container
+        buttonAllIncludingRemoved.setOnClickListener(v -> setFilterText(R.string.all_including_removed));
+        buttonAll.setOnClickListener(v -> setFilterText(R.string.all));
+        buttonInProgress.setOnClickListener(v -> setFilterText(R.string.in_progress));
+        buttonFuture.setOnClickListener(v -> setFilterText(R.string.future));
+        buttonPast.setOnClickListener(v -> setFilterText(R.string.past));
+        buttonStarred.setOnClickListener(v -> setFilterText(R.string.starred));
+        buttonRemoved.setOnClickListener(v -> setFilterText(R.string.removed_from_view));
 
-        buttonInProgress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inProgressButton.setText(R.string.in_progress);
-                additionalButtonsContainer.setVisibility(View.GONE);
-            }
-        });
+        // Add click listener for "Introduction to Algorithms" to navigate to Course activity
+        View courseItem = view.findViewById(R.id.course_algorithm); // Update this ID if needed
+        courseItem.setOnClickListener(v -> openCourseActivity());
 
-        buttonFuture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inProgressButton.setText(R.string.future);
-                additionalButtonsContainer.setVisibility(View.GONE);
-            }
-        });
+        return view;
+    }
 
-        buttonPast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inProgressButton.setText(R.string.past);
-                additionalButtonsContainer.setVisibility(View.GONE);
-            }
-        });
+    private void setFilterText(int stringResId) {
+        // Update inProgressButton text and hide additional buttons container
+        inProgressButton.setText(stringResId);
+        additionalButtonsContainer.setVisibility(View.GONE);
+    }
 
-        buttonStarred.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inProgressButton.setText(R.string.starred);
-                additionalButtonsContainer.setVisibility(View.GONE);
-            }
-        });
-
-        buttonRemoved.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inProgressButton.setText(R.string.removed_from_view);
-                additionalButtonsContainer.setVisibility(View.GONE);
-            }
-        });
-
-        return view; // Return the inflated view
+    private void openCourseActivity() {
+        // Start Course activity
+        Intent intent = new Intent(requireContext(), Course.class);
+        startActivity(intent);
     }
 }
